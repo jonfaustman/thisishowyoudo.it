@@ -1,0 +1,310 @@
+@import reset.sass
+
+// Sass mixins
+@mixin border-radius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    -o-border-radius: $radius
+    -ms-border-radius: $radius
+    -khtml-border-radius: $radius
+    border-radius: $radius
+
+@mixin double-text-shadow($shadow-1, $shadow-2)
+    -webkit-text-shadow: $shadow-1, $shadow-2
+    -moz-text-shadow: $shadow-1, $shadow-2
+    -o-text-shadow: $shadow-1, $shadow-2
+    text-shadow: $shadow-1, $shadow-2
+    
+@mixin text-shadow($shadow)
+    -webkit-text-shadow: $shadow
+    -moz-text-shadow: $shadow
+    -o-text-shadow: $shadow
+    text-shadow: $shadow
+
+@mixin double-box-shadow($shadow-1, $shadow-2)
+    -webkit-box-shadow: $shadow-1, $shadow-2
+    -moz-box-shadow: $shadow-1, $shadow-2
+    -o-box-shadow: $shadow-1, $shadow-2
+    box-shadow: $shadow-1, $shadow-2
+
+@mixin box-shadow($shadow)
+    -webkit-box-shadow: $shadow
+    -moz-box-shadow: $shadow
+    -o-box-shadow: $shadow
+    box-shadow: $shadow
+
+@mixin transition($property, $duration, $function)
+    -webkit-transition: $property $duration $function
+    -moz-transition: $property $duration $function
+    -o-transition: $property $duration $function
+    transition: $property $duration $function
+
+@mixin transform($transform)
+    -webkit-transform: $transform
+    -moz-transform: $transform
+    -o-transform: $transform
+    transform: $transform
+
+@font-face
+    font-family: 'ChunkFiveRegular'
+    src: url('../fonts/Chunkfive-webfont.eot')
+    src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Chunkfive-webfont.woff') format('woff'), url('../fonts/Chunkfive-webfont.ttf') format('truetype'), url('../fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'QuicksandLight'
+    src: url('../fonts/Quicksand_Light-webfont.eot')
+    src: url('../fonts/Quicksand_Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Quicksand_Light-webfont.woff') format('woff'), url('../fonts/Quicksand_Light-webfont.ttf') format('truetype'), url('../fonts/Quicksand_Light-webfont.svg#QuicksandLight') format('svg')
+    font-weight: normal
+    font-style: normal
+
+body
+    background: rgb(17,17,17) url(../images/body-bkgrd.png)
+    color: rgb(255,255,255)
+    font: medium/1.5 QuickSandLight, Arial, sans-serif
+
+a
+    color: rgb(255,255,255)
+    text-decoration: none
+
+abbr
+    cursor: help
+sub
+    vertical-align: sub
+
+header, #main
+    width: 60em
+
+header
+    margin-top: 2em
+    > h1
+        font-size: 3.125em
+        > a
+            @include double-text-shadow(3px 3px 1px rgb(255,0,0), -3px -3px 1px rgb(0,255,255))
+            @include transition(text-shadow, .1s, ease)
+            &:focus, &:hover
+                @include text-shadow(none)
+                // text-shadow: -3px -3px 1px rgb(255,0,0), 3px 3px 1px rgb(0,255,255)
+
+#main
+    margin-bottom: 2em
+    > p
+        line-height: 2em
+        margin-bottom: 2em
+    > h1
+        border-bottom: 1px solid rgb(255,255,255)
+        clear: both
+        font-size: 3em
+        line-height: 48px
+        margin-bottom: .5em
+        @include text-shadow(2px 2px 1px rgb(17,17,17))
+
+.no-csstranforms
+    section
+    > .place
+        @include transform(none)
+        left: 0
+        top: 0
+        > .ribbon
+            margin: 0 auto 2em
+
+section
+    @include border-radius(5px)
+    @include double-box-shadow(2px 2px 0 rgb(255,0,0), -2px -2px 0 rgb(0,255,255))
+    @include transition(box-shadow, .1s, ease)
+    background-color: rgba(255,255,255,.75)
+    border: 5px solid rgb(255,255,255)
+    float: left
+    font-family: QuickSandLight, Arial, sans-serif
+    margin-bottom: 1em
+    padding: 1em
+    position: relative
+    width: 26.875em
+    &:hover, &:focus
+        @include box-shadow(none)
+    // &:nth-child(even)
+    + section
+        margin-left: 1em
+        + section
+            clear: left
+            margin-left: 0
+    a
+        @include double-text-shadow(1px 1px 1px rgb(255,0,0), -1px -1px 1px rgb(0,255,255))
+        @include transition(text-shadow, .05s, ease)
+        color: rgb(17,17,17)
+        &:focus, &:hover
+            color: rgb(17,17,17)
+            @include text-shadow(none)
+    > .place
+        @include transform(rotate(30deg))
+        position: relative
+        left: 300px
+        top: 50px
+        z-index: 1
+        > .ribbon
+            background: #ba89b6
+            color: rgb(255,255,255)
+            font-weight: bold
+            line-height: 1em
+            margin-bottom: 2em
+            padding: 1em 1.25em
+            position: relative
+            text-align: center
+            width: 30%
+            &:before, &:after
+                border: 1.5em solid #986794
+                bottom: -1em
+                content: ""
+                display: block
+                position: absolute
+                z-index: -1
+            &:before
+                border-right-width: 1.5em
+                border-left-color: transparent
+                left: -2em
+            &:after
+                border-left-width: 1.5em
+                border-right-color: transparent
+                right: -2em
+            > i:before, > i:after
+                border-style: solid
+                border-color: #804f7c transparent transparent transparent
+                bottom: -1em
+                content: ""
+                display: block
+                position: absolute
+            > i:before
+                border-width: 1em 0 0 1em
+                left: 0
+            > i:after
+                border-width: 1em 1em 0 0
+                right: 0
+        > .first
+            background-color: rgb(0,0,255)
+            &:before, &:after
+                border-color: rgb(0,0,230)
+            &:before
+                border-left-color: transparent
+            &:after
+                border-right-color: transparent
+            > i:before, i:after
+                border-color: rgb(0,0,205) transparent transparent transparent
+        > .second
+            background-color: rgb(255,0,0)
+            &:before, &:after
+                border-color: rgb(230,0,0)
+            &:before
+                border-left-color: transparent
+            &:after
+                border-right-color: transparent
+            > i:before, i:after
+                border-color: rgb(205,0,0) transparent transparent transparent
+        > .third
+            background-color: rgb(255,255,255)
+            color: rgb(0,0,0)
+            &:before, &:after
+                border-color: rgb(230,230,230)
+            &:before
+                border-left-color: transparent
+            &:after
+                border-right-color: transparent
+            > i:before, i:after
+                border-color: rgb(205,205,205) transparent transparent transparent
+    > h1, > h2, > table > caption, table > thead
+        font-family: ChunkFiveRegular, Georgia, serif
+        @include text-shadow(2px 2px 1px rgb(17,17,17))
+    > h1
+        font-size: 2.5em
+        a
+            @include text-shadow(2px 2px 1px rgb(17,17,17))
+            @include transition(text-shadow, .05s, ease)
+            color: rgb(255,255,255)
+            &:focus, &:hover
+                color: rgb(17,17,17)
+                @include text-shadow(2px 2px 1px rgb(255,255,255))
+    > h2, > table > caption
+        font-size: 1.25em
+    > img
+        @include border-radius(5px)
+        border: 5px solid rgb(255,255,255)
+        float: left
+        height: 175px
+        margin-right: 1em
+        width: 150px
+        &:hover
+            @include box-shadow(3px 3px 3px rgba(0,0,0,.5))
+            @include transform(scale(1.25))
+    > p, > dl, > table > tbody
+        color: rgb(17,17,17)
+    > p
+        margin-bottom: .75em
+    > table
+        margin-bottom: 1.5em
+        text-align: center
+        vertical-align: top
+        > tbody > tr:nth-child(odd)
+            background: rgba(255, 255, 255, 0.2)
+        > thead > tr, > tbody > tr:hover
+            background: rgba(0, 0, 0, .2)
+        > caption
+            text-align: left
+        td, th
+            border: 1px solid rgba(255,255,255, .25)
+            padding: .5em .25em
+
+.center
+    margin-left: auto
+    margin-right: auto
+
+.clearfix
+    &:before
+        content: '\0020'
+        display: block
+        overflow: hidden
+        visibility: hidden
+        width: 0
+        height: 0
+    &:after
+        content: '\0020'
+        display: block
+        overflow: hidden
+        visibility: hidden
+        width: 0
+        height: 0
+        clear: both
+    zoom: 1
+
+@media screen and (max-width: 480px)
+    header, #main
+        width: 30em
+    section
+        float: none
+        width: 27.375em
+        &:nth-child(even)
+            margin-right: 0
+        > .place
+            @include transform(none)
+            left: 0
+            top: 0
+            > .ribbon
+                margin: 0 auto 2em
+        > table
+            width: 27.375em
+
+@media screen and (min-width: 481px) and (max-width: 768px)
+    header, #main
+        width: 40em
+    section
+        float: none
+        width: 37.375em
+        &:nth-child(even)
+            margin-right: 0
+        > .place
+            @include transform(none)
+            left: 0
+            top: 0
+            > .ribbon
+                margin: 0 auto 2em
+        > table
+            width: 37.375em

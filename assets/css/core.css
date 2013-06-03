@@ -1,0 +1,104 @@
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+@font-face { font-family: "ChunkFiveRegular"; src: url("../fonts/Chunkfive-webfont.eot"); src: url("../fonts/Chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Chunkfive-webfont.woff") format("woff"), url("../fonts/Chunkfive-webfont.ttf") format("truetype"), url("../fonts/Chunkfive-webfont.svg#ChunkFiveRegular") format("svg"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: "QuicksandLight"; src: url("../fonts/Quicksand_Light-webfont.eot"); src: url("../fonts/Quicksand_Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Quicksand_Light-webfont.woff") format("woff"), url("../fonts/Quicksand_Light-webfont.ttf") format("truetype"), url("../fonts/Quicksand_Light-webfont.svg#QuicksandLight") format("svg"); font-weight: normal; font-style: normal; }
+
+body { background: #111111 url(../images/body-bkgrd.png); color: white; font: medium/1.5 QuickSandLight, Arial, sans-serif; }
+
+a { color: white; text-decoration: none; }
+
+abbr { cursor: help; }
+
+sub { vertical-align: sub; }
+
+header, #main { width: 60em; }
+
+header { margin-top: 2em; }
+header > h1 { font-size: 3.125em; }
+header > h1 > a { -webkit-text-shadow: 3px 3px 1px red, -3px -3px 1px aqua; -moz-text-shadow: 3px 3px 1px red, -3px -3px 1px aqua; -o-text-shadow: 3px 3px 1px red, -3px -3px 1px aqua; text-shadow: 3px 3px 1px red, -3px -3px 1px aqua; -webkit-transition: text-shadow 0.1s ease; -moz-transition: text-shadow 0.1s ease; -o-transition: text-shadow 0.1s ease; transition: text-shadow 0.1s ease; }
+header > h1 > a:focus, header > h1 > a:hover { -webkit-text-shadow: none; -moz-text-shadow: none; -o-text-shadow: none; text-shadow: none; }
+
+#main { margin-bottom: 2em; }
+#main > p { line-height: 2em; margin-bottom: 2em; }
+#main > h1 { border-bottom: 1px solid white; clear: both; font-size: 3em; line-height: 48px; margin-bottom: 0.5em; -webkit-text-shadow: 2px 2px 1px #111111; -moz-text-shadow: 2px 2px 1px #111111; -o-text-shadow: 2px 2px 1px #111111; text-shadow: 2px 2px 1px #111111; }
+
+.no-csstranforms > .place { -webkit-transform: none; -moz-transform: none; -o-transform: none; transform: none; left: 0; top: 0; }
+.no-csstranforms > .place > .ribbon { margin: 0 auto 2em; }
+
+section { -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; -webkit-box-shadow: 2px 2px 0 red, -2px -2px 0 aqua; -moz-box-shadow: 2px 2px 0 red, -2px -2px 0 aqua; -o-box-shadow: 2px 2px 0 red, -2px -2px 0 aqua; box-shadow: 2px 2px 0 red, -2px -2px 0 aqua; -webkit-transition: box-shadow 0.1s ease; -moz-transition: box-shadow 0.1s ease; -o-transition: box-shadow 0.1s ease; transition: box-shadow 0.1s ease; background-color: rgba(255, 255, 255, 0.75); border: 5px solid white; float: left; font-family: QuickSandLight, Arial, sans-serif; margin-bottom: 1em; padding: 1em; position: relative; width: 26.875em; }
+section:hover, section:focus { -webkit-box-shadow: none; -moz-box-shadow: none; -o-box-shadow: none; box-shadow: none; }
+section + section { margin-left: 1em; }
+section + section + section { clear: left; margin-left: 0; }
+section a { -webkit-text-shadow: 1px 1px 1px red, -1px -1px 1px aqua; -moz-text-shadow: 1px 1px 1px red, -1px -1px 1px aqua; -o-text-shadow: 1px 1px 1px red, -1px -1px 1px aqua; text-shadow: 1px 1px 1px red, -1px -1px 1px aqua; -webkit-transition: text-shadow 0.05s ease; -moz-transition: text-shadow 0.05s ease; -o-transition: text-shadow 0.05s ease; transition: text-shadow 0.05s ease; color: #111111; }
+section a:focus, section a:hover { color: #111111; -webkit-text-shadow: none; -moz-text-shadow: none; -o-text-shadow: none; text-shadow: none; }
+section > .place { -webkit-transform: rotate(30deg); -moz-transform: rotate(30deg); -o-transform: rotate(30deg); transform: rotate(30deg); position: relative; left: 300px; top: 50px; z-index: 1; }
+section > .place > .ribbon { background: #ba89b6; color: white; font-weight: bold; line-height: 1em; margin-bottom: 2em; padding: 1em 1.25em; position: relative; text-align: center; width: 30%; }
+section > .place > .ribbon:before, section > .place > .ribbon:after { border: 1.5em solid #986794; bottom: -1em; content: ""; display: block; position: absolute; z-index: -1; }
+section > .place > .ribbon:before { border-right-width: 1.5em; border-left-color: transparent; left: -2em; }
+section > .place > .ribbon:after { border-left-width: 1.5em; border-right-color: transparent; right: -2em; }
+section > .place > .ribbon > i:before, section > .place > .ribbon > i:after { border-style: solid; border-color: #804f7c transparent transparent transparent; bottom: -1em; content: ""; display: block; position: absolute; }
+section > .place > .ribbon > i:before { border-width: 1em 0 0 1em; left: 0; }
+section > .place > .ribbon > i:after { border-width: 1em 1em 0 0; right: 0; }
+section > .place > .first { background-color: blue; }
+section > .place > .first:before, section > .place > .first:after { border-color: #0000e6; }
+section > .place > .first:before { border-left-color: transparent; }
+section > .place > .first:after { border-right-color: transparent; }
+section > .place > .first > i:before, section > .place > .first i:after { border-color: #0000cd transparent transparent transparent; }
+section > .place > .second { background-color: red; }
+section > .place > .second:before, section > .place > .second:after { border-color: #e60000; }
+section > .place > .second:before { border-left-color: transparent; }
+section > .place > .second:after { border-right-color: transparent; }
+section > .place > .second > i:before, section > .place > .second i:after { border-color: #cd0000 transparent transparent transparent; }
+section > .place > .third { background-color: white; color: black; }
+section > .place > .third:before, section > .place > .third:after { border-color: #e6e6e6; }
+section > .place > .third:before { border-left-color: transparent; }
+section > .place > .third:after { border-right-color: transparent; }
+section > .place > .third > i:before, section > .place > .third i:after { border-color: #cdcdcd transparent transparent transparent; }
+section > h1, section > h2, section > table > caption, section table > thead { font-family: ChunkFiveRegular, Georgia, serif; -webkit-text-shadow: 2px 2px 1px #111111; -moz-text-shadow: 2px 2px 1px #111111; -o-text-shadow: 2px 2px 1px #111111; text-shadow: 2px 2px 1px #111111; }
+section > h1 { font-size: 2.5em; }
+section > h1 a { -webkit-text-shadow: 2px 2px 1px #111111; -moz-text-shadow: 2px 2px 1px #111111; -o-text-shadow: 2px 2px 1px #111111; text-shadow: 2px 2px 1px #111111; -webkit-transition: text-shadow 0.05s ease; -moz-transition: text-shadow 0.05s ease; -o-transition: text-shadow 0.05s ease; transition: text-shadow 0.05s ease; color: white; }
+section > h1 a:focus, section > h1 a:hover { color: #111111; -webkit-text-shadow: 2px 2px 1px white; -moz-text-shadow: 2px 2px 1px white; -o-text-shadow: 2px 2px 1px white; text-shadow: 2px 2px 1px white; }
+section > h2, section > table > caption { font-size: 1.25em; }
+section > img { -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px; border: 5px solid white; float: left; height: 175px; margin-right: 1em; width: 150px; }
+section > img:hover { -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); -o-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5); -webkit-transform: scale(1.25); -moz-transform: scale(1.25); -o-transform: scale(1.25); transform: scale(1.25); }
+section > p, section > dl, section > table > tbody { color: #111111; }
+section > p { margin-bottom: 0.75em; }
+section > table { margin-bottom: 1.5em; text-align: center; vertical-align: top; }
+section > table > tbody > tr:nth-child(odd) { background: rgba(255, 255, 255, 0.2); }
+section > table > thead > tr, section > table > tbody > tr:hover { background: rgba(0, 0, 0, 0.2); }
+section > table > caption { text-align: left; }
+section > table td, section > table th { border: 1px solid rgba(255, 255, 255, 0.25); padding: 0.5em 0.25em; }
+
+.center { margin-left: auto; margin-right: auto; }
+
+.clearfix { zoom: 1; }
+.clearfix:before { content: "\0020"; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+.clearfix:after { content: "\0020"; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; clear: both; }
+
+@media screen and (max-width: 480px) { header, #main { width: 30em; }
+  section { float: none; width: 27.375em; }
+  section:nth-child(even) { margin-right: 0; }
+  section > .place { -webkit-transform: none; -moz-transform: none; -o-transform: none; transform: none; left: 0; top: 0; }
+  section > .place > .ribbon { margin: 0 auto 2em; }
+  section > table { width: 27.375em; } }
+@media screen and (min-width: 481px) and (max-width: 768px) { header, #main { width: 40em; }
+  section { float: none; width: 37.375em; }
+  section:nth-child(even) { margin-right: 0; }
+  section > .place { -webkit-transform: none; -moz-transform: none; -o-transform: none; transform: none; left: 0; top: 0; }
+  section > .place > .ribbon { margin: 0 auto 2em; }
+  section > table { width: 37.375em; } }
